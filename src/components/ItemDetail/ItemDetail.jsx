@@ -1,5 +1,7 @@
+import ItemCount from "../ItemCount/ItemCount";
+
 function ItemDetail(props) {
-    const {products} = props;
+    const { products } = props;
 
     return (
         <div className="cardInfo">
@@ -14,6 +16,7 @@ function ItemDetail(props) {
                 <div>
                     <h5 className="cardInfoPrice">Price: $ {products.price}</h5>
                 </div>
+                <ItemCount stock={products.stock} />
             </div>
         </div>
     )
