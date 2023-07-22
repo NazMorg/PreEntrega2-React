@@ -2,7 +2,7 @@ import './itemContainer.css';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import getData, { getCategory } from '../../services/asyncMock';
-import Item from '../Item/Item';
+import ItemList from '../ItemList/ItemList';
 
 
 function ItemListContainer() {
@@ -19,12 +19,7 @@ function ItemListContainer() {
 
 
     return (
-        <div>
-            <h2>Welcome to the Khajit's Corner!</h2>
-            <div className='productos'>
-                {products.map((item) => (<Item key={item.id} {...item} />))}
-            </div>
-        </div>
+        <ItemList products={products} />
     );
 }
 
